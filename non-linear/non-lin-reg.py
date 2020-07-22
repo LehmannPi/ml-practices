@@ -9,57 +9,57 @@ from scipy.optimize import curve_fit
 # Examples of non-linear functions that can be used to match the data format
 # =============================================================================
 
-print("Polynomial")
 x = np.arange(-5.0, 5.0, 0.1)
 y = 1*(x**3) + 1*(x**2) + 1*x + 3
 y_noise = 20 * np.random.normal(size=x.size)
 ydata = y + y_noise
-plt.plot(x, ydata,  'bo', markersize=4)
-plt.plot(x,y, 'r') 
+plt.plot(x, ydata,  'bo', markersize=3)
+plt.plot(x,y, 'r')
+plt.title("Polynomial")
 plt.ylabel('Dependent Variable')
 plt.xlabel('Indepdendent Variable')
 plt.show()
 
-print("\nQuadratic")
 x = np.arange(-5.0, 5.0, 0.1)
 y = np.power(x,2)
 y_noise = 2 * np.random.normal(size=x.size)
 ydata = y + y_noise
-plt.plot(x, ydata,  'bo', markersize=4)
+plt.plot(x, ydata,  'bo', markersize=3)
 plt.plot(x,y, 'r') 
+plt.title("Quadratic")
 plt.ylabel('Dependent Variable')
 plt.xlabel('Indepdendent Variable')
 plt.show()
 
-print("\nExponential")
 X = np.arange(-5.0, 5.0, 0.1)
 Y= np.exp(X)
 Y_noise = 4*np.random.normal(size=X.size)
 Y_data = Y + Y_noise
-plt.plot(X,Y)
-plt.plot(X,Y_data, 'ro', markersize=4)
+plt.plot(X,Y,'r')
+plt.plot(X,Y_data, 'bo', markersize=3)
+plt.title("Exponential")
 plt.ylabel('Dependent Variable')
 plt.xlabel('Indepdendent Variable')
 plt.show()
 
-print("\nLogarithmic")
 X = np.arange(-5.0, 5.0, 0.1)
 Y = np.log(X)
 Y_noise = 0.4*np.random.normal(size=X.size)
 Y_data = Y + Y_noise
-plt.plot(X,Y)
-plt.plot(X,Y_data,'ro',markersize=4)
+plt.plot(X,Y,'r')
+plt.plot(X,Y_data,'bo',markersize=3)
+plt.title("Logarithmic")
 plt.ylabel('Dependent Variable')
 plt.xlabel('Indepdendent Variable')
 plt.show()
 
-print("\nLogistic(/Sigmoidal)")
 X = np.arange(-5.0, 8.0, 0.1)
 Y = 1+4/(1+np.power(3, X-2))
 Y_noise = 0.5*np.random.normal(size=X.size)
 Y_data = Y + Y_noise
-plt.plot(X,Y_data,'ro', markersize=4)
-plt.plot(X,Y)
+plt.plot(X,Y_data,'bo', markersize=3)
+plt.plot(X,Y,'r')
+plt.title("Logistic/Sigmoidal")
 plt.ylabel('Dependent Variable')
 plt.xlabel('Indepdendent Variable')
 plt.show()
@@ -79,7 +79,8 @@ plt.ylabel('GDP')
 plt.xlabel('Year')
 plt.show()
 
-# Choosing a model - The logistic could be a good aproximation
+# Choosing a model - The logistic could be a good aproximation because the rise
+# of the curve is not very sudden and the growth decreases at the end
 X = np.arange(-5.0, 5.0, 0.1)
 Y = 1.0 / (1.0 + np.exp(-X))
 plt.plot(X,Y) 
@@ -88,7 +89,7 @@ plt.xlabel('Indepdendent Variable')
 plt.show()
 
 # With the logistic function at hand, the model can be build.
-# Function y = 1 / ( 1+ exp^(Beta1*(X-Beta2)))
+# Function: y = 1 / ( 1+ exp^(Beta1*(X-Beta2)))
 # Beta1: Curve's steepness
 # Beta2: Slide curve on x-axis
 
