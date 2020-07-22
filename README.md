@@ -2,7 +2,7 @@
 This is a collection of implementations on machine learning algorithms.
 It is organized with several projects on practical applications grouped separately, with the main goal being the understanding of the techniques.
 
-There are introductions and images for reference inside every folder
+There are introductions and reference images inside every folder
 ### Implementations
 <details>
 <summary>Regression </summary> 
