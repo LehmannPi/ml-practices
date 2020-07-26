@@ -41,7 +41,7 @@ print("Train set Accuracy: ", metrics.accuracy_score(y_train, neigh.predict(X_tr
 print("Test set Accuracy: ", metrics.accuracy_score(y_test, yhat))
 
 # =============================================================================
-# Determining best k value in a range 10
+# Determining best k value in a range of 10
 # =============================================================================
 
 Ks = 10
