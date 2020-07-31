@@ -16,14 +16,17 @@ There are introductions and reference images inside every folder
 <details>
 <summary>Classification </summary> 
  
- - [ ] K-Nearest Neighbors 
+ - [x] K-Nearest Neighbors 
  - [ ] Decision Trees
+ - [ ] Logistic Regression
+ - [ ] Support Vector Machine
 
 </details>
 <details>
 <summary>Clustering </summary> 
  
  - [ ] K-Means 
- - [ ] Hierarchical
+ - [ ] Agglomerative
+ - [ ] DBSCAN
 
 </details>
